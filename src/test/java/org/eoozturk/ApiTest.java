@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
+import static org.apache.commons.codec.digest.UnixCrypt.body;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
@@ -33,6 +34,5 @@ public class ApiTest {
         ResponseBody body = response.getBody();
         String bodyString = body.asString();
         System.out.println(bodyString);
-
     }
 }
